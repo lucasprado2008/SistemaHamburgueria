@@ -16,5 +16,28 @@ namespace SistemaHamburgueria
         {
             InitializeComponent();
         }
+
+        private void btnProsseguir_Click(object sender, EventArgs e)
+        {
+            frmPedido pedido = new frmPedido();
+            pedido.Show();
+            this.Hide();
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            // CRIANDO IF DE SAÍDA
+            DialogResult sair = MessageBox.Show("Deseja sair?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            if (sair == DialogResult.No)
+            {
+                frmMenu menu = new frmMenu();
+                menu.Show();
+                this.Hide();
+            }
+            else
+            {
+                Application.Exit();
+            }
+        }
     }
 }
