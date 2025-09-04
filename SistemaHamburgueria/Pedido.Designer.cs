@@ -38,7 +38,7 @@
             this.txtValorPagar = new System.Windows.Forms.TextBox();
             this.lblValorPagar = new System.Windows.Forms.Label();
             this.lblValorOpcionais = new System.Windows.Forms.Label();
-            this.txtValorPizza = new System.Windows.Forms.TextBox();
+            this.txtValorHamburguer = new System.Windows.Forms.TextBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
             this.chkTomate = new System.Windows.Forms.CheckBox();
             this.chkCebolaCaramelizada = new System.Windows.Forms.CheckBox();
@@ -69,6 +69,7 @@
             this.txtCodPesquisar.Name = "txtCodPesquisar";
             this.txtCodPesquisar.Size = new System.Drawing.Size(239, 20);
             this.txtCodPesquisar.TabIndex = 32;
+            this.txtCodPesquisar.TextChanged += new System.EventHandler(this.txtCodPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
@@ -89,6 +90,7 @@
             this.btnSair.TabIndex = 30;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCalcular
             // 
@@ -99,6 +101,7 @@
             this.btnCalcular.TabIndex = 29;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
@@ -109,6 +112,7 @@
             this.btnSalvar.TabIndex = 28;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtValorOpcionais
             // 
@@ -146,13 +150,13 @@
             this.lblValorOpcionais.TabIndex = 24;
             this.lblValorOpcionais.Text = "VALOR DOS OPCIONAIS";
             // 
-            // txtValorPizza
+            // txtValorHamburguer
             // 
-            this.txtValorPizza.Location = new System.Drawing.Point(529, 95);
-            this.txtValorPizza.Margin = new System.Windows.Forms.Padding(2);
-            this.txtValorPizza.Name = "txtValorPizza";
-            this.txtValorPizza.Size = new System.Drawing.Size(85, 20);
-            this.txtValorPizza.TabIndex = 23;
+            this.txtValorHamburguer.Location = new System.Drawing.Point(529, 95);
+            this.txtValorHamburguer.Margin = new System.Windows.Forms.Padding(2);
+            this.txtValorHamburguer.Name = "txtValorHamburguer";
+            this.txtValorHamburguer.Size = new System.Drawing.Size(85, 20);
+            this.txtValorHamburguer.TabIndex = 23;
             // 
             // grpOpcionais
             // 
@@ -169,6 +173,7 @@
             this.grpOpcionais.TabIndex = 22;
             this.grpOpcionais.TabStop = false;
             this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
+            this.grpOpcionais.Enter += new System.EventHandler(this.grpOpcionais_Enter);
             // 
             // chkTomate
             // 
@@ -234,6 +239,7 @@
             this.dgvPedido.RowTemplate.Height = 24;
             this.dgvPedido.Size = new System.Drawing.Size(469, 122);
             this.dgvPedido.TabIndex = 20;
+            this.dgvPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellDoubleClick);
             // 
             // cmbTamanhoHamburguer
             // 
@@ -254,6 +260,7 @@
             this.btnNovo.TabIndex = 18;
             this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // chkAlface
             // 
@@ -281,14 +288,16 @@
             this.Controls.Add(this.txtValorPagar);
             this.Controls.Add(this.lblValorPagar);
             this.Controls.Add(this.lblValorOpcionais);
-            this.Controls.Add(this.txtValorPizza);
+            this.Controls.Add(this.txtValorHamburguer);
             this.Controls.Add(this.grpOpcionais);
             this.Controls.Add(this.lblValorHamburguer);
             this.Controls.Add(this.dgvPedido);
             this.Controls.Add(this.cmbTamanhoHamburguer);
             this.Controls.Add(this.btnNovo);
             this.Name = "frmPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
+            this.Load += new System.EventHandler(this.frmPedido_Load);
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
@@ -309,7 +318,7 @@
         private System.Windows.Forms.TextBox txtValorPagar;
         private System.Windows.Forms.Label lblValorPagar;
         private System.Windows.Forms.Label lblValorOpcionais;
-        private System.Windows.Forms.TextBox txtValorPizza;
+        private System.Windows.Forms.TextBox txtValorHamburguer;
         private System.Windows.Forms.GroupBox grpOpcionais;
         private System.Windows.Forms.CheckBox chkTomate;
         private System.Windows.Forms.CheckBox chkCebolaCaramelizada;

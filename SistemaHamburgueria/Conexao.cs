@@ -1,12 +1,11 @@
-﻿using System;
-using System.Runtime.InteropServices.WindowsRuntime;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace SistemaHamburgueria
 {
     class Conexao
     {
-        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=BDPizzaria1;user=root;pwd=12345678");
+        MySqlConnection con = new MySqlConnection("Data Source=localhost;Initial Catalog=bdProjeto;user=root;pwd=12345678");
 
         public static string msg;
 
