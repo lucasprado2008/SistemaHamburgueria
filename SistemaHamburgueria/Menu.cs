@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaHamburgueria
 {
-    public partial class frmPedido : Form
+    public partial class Menu : Form
     {
-        public frmPedido()
+        public Menu()
         {
             InitializeComponent();
         }
