@@ -41,6 +41,7 @@
             this.lblValorOpcionais = new System.Windows.Forms.Label();
             this.txtValorHamburguer = new System.Windows.Forms.TextBox();
             this.grpOpcionais = new System.Windows.Forms.GroupBox();
+            this.chkAlface = new System.Windows.Forms.CheckBox();
             this.chkTomate = new System.Windows.Forms.CheckBox();
             this.chkCebolaCaramelizada = new System.Windows.Forms.CheckBox();
             this.chkQueijoExtra = new System.Windows.Forms.CheckBox();
@@ -48,15 +49,22 @@
             this.lblValorHamburguer = new System.Windows.Forms.Label();
             this.dgvPedido = new System.Windows.Forms.DataGridView();
             this.cmbTamanhoHamburguer = new System.Windows.Forms.ComboBox();
-            this.btnNovo = new System.Windows.Forms.Button();
-            this.chkAlface = new System.Windows.Forms.CheckBox();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.dgvListaPedido = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pcbBurger = new System.Windows.Forms.PictureBox();
             this.grpOpcionais.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPedido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBurger)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodPedido
             // 
-            this.txtCodPedido.Location = new System.Drawing.Point(339, 6);
+            this.txtCodPedido.Location = new System.Drawing.Point(351, 50);
             this.txtCodPedido.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodPedido.Name = "txtCodPedido";
             this.txtCodPedido.ReadOnly = true;
@@ -65,98 +73,107 @@
             // 
             // txtCodPesquisar
             // 
-            this.txtCodPesquisar.Location = new System.Drawing.Point(84, 6);
+            this.txtCodPesquisar.Location = new System.Drawing.Point(88, 49);
             this.txtCodPesquisar.Margin = new System.Windows.Forms.Padding(2);
             this.txtCodPesquisar.Name = "txtCodPesquisar";
             this.txtCodPesquisar.Size = new System.Drawing.Size(239, 20);
-            this.txtCodPesquisar.TabIndex = 32;
+            this.txtCodPesquisar.TabIndex = 0;
             this.txtCodPesquisar.TextChanged += new System.EventHandler(this.txtCodPesquisar_TextChanged);
             // 
             // lblPesquisar
             // 
             this.lblPesquisar.AutoSize = true;
-            this.lblPesquisar.Location = new System.Drawing.Point(11, 9);
+            this.lblPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPesquisar.Location = new System.Drawing.Point(9, 50);
             this.lblPesquisar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPesquisar.Name = "lblPesquisar";
-            this.lblPesquisar.Size = new System.Drawing.Size(72, 13);
+            this.lblPesquisar.Size = new System.Drawing.Size(85, 16);
             this.lblPesquisar.TabIndex = 31;
-            this.lblPesquisar.Text = "PESQUISAR:";
+            this.lblPesquisar.Text = "Pesquisar: ";
             // 
             // btnSair
             // 
-            this.btnSair.Location = new System.Drawing.Point(801, 367);
+            this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Location = new System.Drawing.Point(730, 247);
             this.btnSair.Margin = new System.Windows.Forms.Padding(2);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(72, 32);
-            this.btnSair.TabIndex = 30;
+            this.btnSair.Size = new System.Drawing.Size(134, 53);
+            this.btnSair.TabIndex = 11;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnCalcular
             // 
-            this.btnCalcular.Location = new System.Drawing.Point(703, 368);
+            this.btnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalcular.Location = new System.Drawing.Point(557, 161);
             this.btnCalcular.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(72, 32);
-            this.btnCalcular.TabIndex = 29;
+            this.btnCalcular.Size = new System.Drawing.Size(134, 53);
+            this.btnCalcular.TabIndex = 8;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(599, 368);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(730, 161);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(72, 32);
-            this.btnSalvar.TabIndex = 28;
-            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.Size = new System.Drawing.Size(134, 53);
+            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.Text = "Salvar Pedido";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtValorOpcionais
             // 
-            this.txtValorOpcionais.Location = new System.Drawing.Point(667, 95);
+            this.txtValorOpcionais.Location = new System.Drawing.Point(194, 77);
             this.txtValorOpcionais.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorOpcionais.Name = "txtValorOpcionais";
-            this.txtValorOpcionais.Size = new System.Drawing.Size(85, 20);
+            this.txtValorOpcionais.ReadOnly = true;
+            this.txtValorOpcionais.Size = new System.Drawing.Size(85, 29);
             this.txtValorOpcionais.TabIndex = 27;
             // 
             // txtValorPagar
             // 
-            this.txtValorPagar.Location = new System.Drawing.Point(794, 95);
+            this.txtValorPagar.Location = new System.Drawing.Point(326, 77);
             this.txtValorPagar.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorPagar.Name = "txtValorPagar";
-            this.txtValorPagar.Size = new System.Drawing.Size(85, 20);
+            this.txtValorPagar.ReadOnly = true;
+            this.txtValorPagar.Size = new System.Drawing.Size(85, 29);
             this.txtValorPagar.TabIndex = 26;
             // 
             // lblValorPagar
             // 
             this.lblValorPagar.AutoSize = true;
-            this.lblValorPagar.Location = new System.Drawing.Point(791, 69);
+            this.lblValorPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorPagar.Location = new System.Drawing.Point(323, 44);
             this.lblValorPagar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorPagar.Name = "lblValorPagar";
-            this.lblValorPagar.Size = new System.Drawing.Size(93, 13);
+            this.lblValorPagar.Size = new System.Drawing.Size(94, 15);
             this.lblValorPagar.TabIndex = 25;
-            this.lblValorPagar.Text = "VALOR A PAGAR";
+            this.lblValorPagar.Text = "Valor a Pagar";
             // 
             // lblValorOpcionais
             // 
             this.lblValorOpcionais.AutoSize = true;
-            this.lblValorOpcionais.Location = new System.Drawing.Point(645, 69);
+            this.lblValorOpcionais.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorOpcionais.Location = new System.Drawing.Point(171, 44);
             this.lblValorOpcionais.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorOpcionais.Name = "lblValorOpcionais";
-            this.lblValorOpcionais.Size = new System.Drawing.Size(130, 13);
+            this.lblValorOpcionais.Size = new System.Drawing.Size(135, 15);
             this.lblValorOpcionais.TabIndex = 24;
-            this.lblValorOpcionais.Text = "VALOR DOS OPCIONAIS";
+            this.lblValorOpcionais.Text = "Valor dos Opcionais";
             // 
             // txtValorHamburguer
             // 
-            this.txtValorHamburguer.Location = new System.Drawing.Point(529, 95);
+            this.txtValorHamburguer.Location = new System.Drawing.Point(39, 77);
             this.txtValorHamburguer.Margin = new System.Windows.Forms.Padding(2);
             this.txtValorHamburguer.Name = "txtValorHamburguer";
-            this.txtValorHamburguer.Size = new System.Drawing.Size(85, 20);
+            this.txtValorHamburguer.ReadOnly = true;
+            this.txtValorHamburguer.Size = new System.Drawing.Size(85, 29);
             this.txtValorHamburguer.TabIndex = 23;
             // 
             // grpOpcionais
@@ -166,15 +183,27 @@
             this.grpOpcionais.Controls.Add(this.chkCebolaCaramelizada);
             this.grpOpcionais.Controls.Add(this.chkQueijoExtra);
             this.grpOpcionais.Controls.Add(this.chkBacon);
-            this.grpOpcionais.Location = new System.Drawing.Point(14, 95);
+            this.grpOpcionais.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpOpcionais.Location = new System.Drawing.Point(215, 88);
             this.grpOpcionais.Margin = new System.Windows.Forms.Padding(2);
             this.grpOpcionais.Name = "grpOpcionais";
             this.grpOpcionais.Padding = new System.Windows.Forms.Padding(2);
-            this.grpOpcionais.Size = new System.Drawing.Size(146, 138);
-            this.grpOpcionais.TabIndex = 22;
+            this.grpOpcionais.Size = new System.Drawing.Size(179, 138);
+            this.grpOpcionais.TabIndex = 2;
             this.grpOpcionais.TabStop = false;
-            this.grpOpcionais.Text = "ESCOLHA OPCIONAIS";
+            this.grpOpcionais.Text = "Escolha Opcionais";
             this.grpOpcionais.Enter += new System.EventHandler(this.grpOpcionais_Enter);
+            // 
+            // chkAlface
+            // 
+            this.chkAlface.AutoSize = true;
+            this.chkAlface.Location = new System.Drawing.Point(4, 115);
+            this.chkAlface.Margin = new System.Windows.Forms.Padding(2);
+            this.chkAlface.Name = "chkAlface";
+            this.chkAlface.Size = new System.Drawing.Size(70, 20);
+            this.chkAlface.TabIndex = 7;
+            this.chkAlface.Text = "Alface";
+            this.chkAlface.UseVisualStyleBackColor = true;
             // 
             // chkTomate
             // 
@@ -182,8 +211,8 @@
             this.chkTomate.Location = new System.Drawing.Point(4, 94);
             this.chkTomate.Margin = new System.Windows.Forms.Padding(2);
             this.chkTomate.Name = "chkTomate";
-            this.chkTomate.Size = new System.Drawing.Size(62, 17);
-            this.chkTomate.TabIndex = 4;
+            this.chkTomate.Size = new System.Drawing.Size(79, 20);
+            this.chkTomate.TabIndex = 6;
             this.chkTomate.Text = "Tomate";
             this.chkTomate.UseVisualStyleBackColor = true;
             // 
@@ -193,8 +222,8 @@
             this.chkCebolaCaramelizada.Location = new System.Drawing.Point(4, 73);
             this.chkCebolaCaramelizada.Margin = new System.Windows.Forms.Padding(2);
             this.chkCebolaCaramelizada.Name = "chkCebolaCaramelizada";
-            this.chkCebolaCaramelizada.Size = new System.Drawing.Size(125, 17);
-            this.chkCebolaCaramelizada.TabIndex = 3;
+            this.chkCebolaCaramelizada.Size = new System.Drawing.Size(176, 20);
+            this.chkCebolaCaramelizada.TabIndex = 5;
             this.chkCebolaCaramelizada.Text = "Cebola Caramelizada";
             this.chkCebolaCaramelizada.UseVisualStyleBackColor = true;
             // 
@@ -204,8 +233,8 @@
             this.chkQueijoExtra.Location = new System.Drawing.Point(4, 52);
             this.chkQueijoExtra.Margin = new System.Windows.Forms.Padding(2);
             this.chkQueijoExtra.Name = "chkQueijoExtra";
-            this.chkQueijoExtra.Size = new System.Drawing.Size(83, 17);
-            this.chkQueijoExtra.TabIndex = 2;
+            this.chkQueijoExtra.Size = new System.Drawing.Size(110, 20);
+            this.chkQueijoExtra.TabIndex = 4;
             this.chkQueijoExtra.Text = "Queijo Extra";
             this.chkQueijoExtra.UseVisualStyleBackColor = true;
             // 
@@ -215,86 +244,135 @@
             this.chkBacon.Location = new System.Drawing.Point(4, 31);
             this.chkBacon.Margin = new System.Windows.Forms.Padding(2);
             this.chkBacon.Name = "chkBacon";
-            this.chkBacon.Size = new System.Drawing.Size(57, 17);
-            this.chkBacon.TabIndex = 1;
+            this.chkBacon.Size = new System.Drawing.Size(70, 20);
+            this.chkBacon.TabIndex = 3;
             this.chkBacon.Text = "Bacon";
             this.chkBacon.UseVisualStyleBackColor = true;
             // 
             // lblValorHamburguer
             // 
             this.lblValorHamburguer.AutoSize = true;
-            this.lblValorHamburguer.Location = new System.Drawing.Point(498, 69);
+            this.lblValorHamburguer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblValorHamburguer.Location = new System.Drawing.Point(13, 44);
             this.lblValorHamburguer.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblValorHamburguer.Name = "lblValorHamburguer";
-            this.lblValorHamburguer.Size = new System.Drawing.Size(143, 13);
+            this.lblValorHamburguer.Size = new System.Drawing.Size(144, 15);
             this.lblValorHamburguer.TabIndex = 21;
-            this.lblValorHamburguer.Text = "VALOR DO HAMBÚRGUER";
+            this.lblValorHamburguer.Text = "Valor do Hambúrguer\r\n";
             // 
             // dgvPedido
             // 
             this.dgvPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedido.Location = new System.Drawing.Point(438, 233);
+            this.dgvPedido.Location = new System.Drawing.Point(531, 314);
             this.dgvPedido.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPedido.Name = "dgvPedido";
             this.dgvPedido.RowHeadersWidth = 51;
             this.dgvPedido.RowTemplate.Height = 24;
-            this.dgvPedido.Size = new System.Drawing.Size(469, 122);
+            this.dgvPedido.Size = new System.Drawing.Size(442, 122);
             this.dgvPedido.TabIndex = 20;
             this.dgvPedido.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPedido_CellDoubleClick);
             // 
             // cmbTamanhoHamburguer
             // 
             this.cmbTamanhoHamburguer.FormattingEnabled = true;
-            this.cmbTamanhoHamburguer.Location = new System.Drawing.Point(11, 49);
+            this.cmbTamanhoHamburguer.Location = new System.Drawing.Point(11, 88);
             this.cmbTamanhoHamburguer.Margin = new System.Windows.Forms.Padding(2);
             this.cmbTamanhoHamburguer.Name = "cmbTamanhoHamburguer";
             this.cmbTamanhoHamburguer.Size = new System.Drawing.Size(180, 21);
-            this.cmbTamanhoHamburguer.TabIndex = 19;
+            this.cmbTamanhoHamburguer.TabIndex = 1;
             this.cmbTamanhoHamburguer.Text = "TAMANHO DO HAMBÚRGUER";
             // 
-            // btnNovo
+            // btnLimpar
             // 
-            this.btnNovo.Location = new System.Drawing.Point(496, 368);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(72, 32);
-            this.btnNovo.TabIndex = 18;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Location = new System.Drawing.Point(557, 247);
+            this.btnLimpar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(134, 53);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // chkAlface
+            // groupBox1
             // 
-            this.chkAlface.AutoSize = true;
-            this.chkAlface.Location = new System.Drawing.Point(4, 115);
-            this.chkAlface.Margin = new System.Windows.Forms.Padding(2);
-            this.chkAlface.Name = "chkAlface";
-            this.chkAlface.Size = new System.Drawing.Size(56, 17);
-            this.chkAlface.TabIndex = 5;
-            this.chkAlface.Text = "Alface";
-            this.chkAlface.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.txtValorHamburguer);
+            this.groupBox1.Controls.Add(this.txtValorOpcionais);
+            this.groupBox1.Controls.Add(this.txtValorPagar);
+            this.groupBox1.Controls.Add(this.lblValorHamburguer);
+            this.groupBox1.Controls.Add(this.lblValorOpcionais);
+            this.groupBox1.Controls.Add(this.lblValorPagar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Chocolate;
+            this.groupBox1.Location = new System.Drawing.Point(13, 262);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(430, 138);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Valores";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(148, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(171, 24);
+            this.lblTitulo.TabIndex = 34;
+            this.lblTitulo.Text = "Faça Seu Pedido";
+            // 
+            // dgvListaPedido
+            // 
+            this.dgvListaPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListaPedido.Location = new System.Drawing.Point(531, 17);
+            this.dgvListaPedido.Margin = new System.Windows.Forms.Padding(2);
+            this.dgvListaPedido.Name = "dgvListaPedido";
+            this.dgvListaPedido.RowHeadersWidth = 51;
+            this.dgvListaPedido.RowTemplate.Height = 24;
+            this.dgvListaPedido.Size = new System.Drawing.Size(353, 122);
+            this.dgvListaPedido.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(491, -1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(2, 465);
+            this.label1.TabIndex = 36;
+            // 
+            // pcbBurger
+            // 
+            this.pcbBurger.Image = ((System.Drawing.Image)(resources.GetObject("pcbBurger.Image")));
+            this.pcbBurger.Location = new System.Drawing.Point(13, 140);
+            this.pcbBurger.Name = "pcbBurger";
+            this.pcbBurger.Size = new System.Drawing.Size(141, 74);
+            this.pcbBurger.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pcbBurger.TabIndex = 37;
+            this.pcbBurger.TabStop = false;
             // 
             // frmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 468);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.pcbBurger);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgvListaPedido);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtCodPedido);
             this.Controls.Add(this.txtCodPesquisar);
             this.Controls.Add(this.lblPesquisar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.txtValorOpcionais);
-            this.Controls.Add(this.txtValorPagar);
-            this.Controls.Add(this.lblValorPagar);
-            this.Controls.Add(this.lblValorOpcionais);
-            this.Controls.Add(this.txtValorHamburguer);
             this.Controls.Add(this.grpOpcionais);
-            this.Controls.Add(this.lblValorHamburguer);
             this.Controls.Add(this.dgvPedido);
             this.Controls.Add(this.cmbTamanhoHamburguer);
-            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.btnLimpar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPedido";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -303,6 +381,10 @@
             this.grpOpcionais.ResumeLayout(false);
             this.grpOpcionais.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedido)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListaPedido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBurger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -329,7 +411,12 @@
         private System.Windows.Forms.Label lblValorHamburguer;
         private System.Windows.Forms.DataGridView dgvPedido;
         private System.Windows.Forms.ComboBox cmbTamanhoHamburguer;
-        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.CheckBox chkAlface;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridView dgvListaPedido;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pcbBurger;
     }
 }

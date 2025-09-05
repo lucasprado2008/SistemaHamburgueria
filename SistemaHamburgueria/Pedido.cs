@@ -18,13 +18,16 @@ namespace SistemaHamburgueria
 
         private void frmPedido_Load(object sender, EventArgs e)
         {
+            dgvListaPedido.Columns.Add("Item", "Item");
+            dgvListaPedido.Columns.Add("Quantidade", "Qtd");
+            dgvListaPedido.Columns.Add("Valor", "Valor (R$)");
             cmbTamanhoHamburguer.Items.Add("Mini - R$ 13,50");
             cmbTamanhoHamburguer.Items.Add("Médio - R$ 20,00");
             cmbTamanhoHamburguer.Items.Add("Grande - R$ 24,00");
             cmbTamanhoHamburguer.Items.Add("Super - R$ 29,00");
         }
 
-        private void btnNovo_Click(object sender, EventArgs e)
+        private void btnLimpar_Click(object sender, EventArgs e)
         {
             chkBacon.Checked = false;
             chkQueijoExtra.Checked = false;
@@ -36,6 +39,7 @@ namespace SistemaHamburgueria
             txtValorPagar.Clear();
             txtCodPedido.Clear();
             txtCodPesquisar.Clear();
+            dgvListaPedido.Rows.Clear();
             cmbTamanhoHamburguer.SelectedIndex = 0;
         }
 
@@ -86,6 +90,13 @@ namespace SistemaHamburgueria
                     MessageBox.Show(erro.Message);
                 }
             }
+            chkBacon.Checked = false;
+            chkQueijoExtra.Checked = false;
+            chkCebolaCaramelizada.Checked = false;
+            chkTomate.Checked = false;
+            chkAlface.Checked = false;
+            cmbTamanhoHamburguer.SelectedIndex = 0;
+            
         }
 
         private void btnCalcular_Click(object sender, EventArgs e)
@@ -95,38 +106,47 @@ namespace SistemaHamburgueria
 
             if (cmbTamanhoHamburguer.SelectedIndex == 0)
             {
+                dgvListaPedido.Rows.Add("Hambúrguer Pequeno", 1, 13.50);
                 valorHamburguer = 13.50;
             }
             else if (cmbTamanhoHamburguer.SelectedIndex == 1)
             {
+                dgvListaPedido.Rows.Add("Hambúrguer Médio", 1, 20.00);
                 valorHamburguer = 20;
             }
             else if (cmbTamanhoHamburguer.SelectedIndex == 2)
             {
+                dgvListaPedido.Rows.Add("Hambúrguer Grande", 1, 24.00);
                 valorHamburguer = 24;
             }
             else if (cmbTamanhoHamburguer.SelectedIndex == 3)
             {
+                dgvListaPedido.Rows.Add("Hambúrguer Super", 1, 29.00);
                 valorHamburguer = 29;
             }
             if (chkBacon.Checked == true)
             {
+                dgvListaPedido.Rows.Add("Bacon", 1, 5.00);
                 valorOpcao = valorOpcao + 4;
             }
             if (chkQueijoExtra.Checked == true)
             {
+                dgvListaPedido.Rows.Add("Queijo Extra", 1, 2.50);
                 valorOpcao = valorOpcao + 2.50;
             }
             if (chkCebolaCaramelizada.Checked == true)
             {
+                dgvListaPedido.Rows.Add("Cebola Caramelizada", 1, 3.00);
                 valorOpcao = valorOpcao + 3;
             }
             if (chkTomate.Checked == true)
             {
+                dgvListaPedido.Rows.Add("Tomate", 1, 1.50);
                 valorOpcao = valorOpcao + 1.50;
             }
             if (chkAlface.Checked == true)
             {
+                dgvListaPedido.Rows.Add("Alface", 1, 1.50);
                 valorOpcao = valorOpcao + 1.50;
             }
             else

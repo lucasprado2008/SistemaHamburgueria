@@ -32,8 +32,8 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.btnProsseguir = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pcbBurger = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBurger)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNome
@@ -78,14 +78,14 @@
             this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // pictureBox1
+            // pcbBurger
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 62);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 67);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pcbBurger.Image = ((System.Drawing.Image)(resources.GetObject("pcbBurger.Image")));
+            this.pcbBurger.Location = new System.Drawing.Point(12, 62);
+            this.pcbBurger.Name = "pcbBurger";
+            this.pcbBurger.Size = new System.Drawing.Size(65, 67);
+            this.pcbBurger.TabIndex = 3;
+            this.pcbBurger.TabStop = false;
             // 
             // frmMenu
             // 
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pcbBurger);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnProsseguir);
             this.Controls.Add(this.lblNome);
@@ -101,7 +101,7 @@
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbBurger)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +112,6 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Button btnProsseguir;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbBurger;
     }
 }
