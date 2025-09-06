@@ -171,7 +171,9 @@ namespace SistemaHamburgueria
             }
             else
             {
-                Application.Exit();
+                frmMenu menu = new frmMenu();
+                this.Close();
+                menu.Show();
             }
         }
 
