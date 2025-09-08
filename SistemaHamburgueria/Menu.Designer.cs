@@ -49,7 +49,7 @@
             // 
             // btnProsseguir
             // 
-            this.btnProsseguir.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnProsseguir.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnProsseguir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProsseguir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnProsseguir.Image = ((System.Drawing.Image)(resources.GetObject("btnProsseguir.Image")));
@@ -65,7 +65,7 @@
             // 
             // btnSair
             // 
-            this.btnSair.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.btnSair.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
